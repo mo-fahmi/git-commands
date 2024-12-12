@@ -1,0 +1,225 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.2;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Form elements */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+  /* appearance: none; */
+}
+button,
+select {
+  text-transform: none;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+textarea {
+  resize: vertical;
+}
+
+/* Images */
+img {
+  border: none;
+  max-width: 100%;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Text */
+p,
+li,
+figcaption {
+  max-width: 65ch;
+  text-wrap: pretty;
+}
+
+/* Input types */
+input[type="search"] {
+  appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+input[type="number"] {
+  appearance: textfield;
+}
+
+/* Fieldset reset */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* getback CODE STARTS HERE --------------------------------------- */
+
+body {
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(216, 16%, 6%);
+  color: white;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-block-end: 3rem;
+}
+
+em {
+  font-style: italic;
+  padding: 0px 6px !important;
+  opacity: 0.7;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.tables__container {
+  margin: auto;
+  max-width: 700px;
+  margin-bottom: 2000px;
+}
+
+nav.links {
+  position: sticky;
+  top: 10px;
+}
+
+nav.links ul {
+  display: grid;
+  gap: 10px;
+}
+
+nav.links .link a {
+  padding: 10px 16px;
+  background-color: hsl(219, 32%, 16%);
+  border-radius: 5px;
+}
+
+.table {
+  outline: solid hsl(218, 17%, 19%) 1px;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  text-wrap: pretty;
+  margin-bottom: 4rem;
+}
+
+/* hover states */
+
+.tables__container:has(.table:hover) .table:not(.table:hover),
+.table:has(*:not(.t_title):hover) .t_description,
+.table:has(*:not(.t_title):hover) .t_command {
+  opacity: 0.25;
+}
+
+.t_description:hover,
+.t_command:hover,
+.t_command:hover + *,
+.t_command:has(+ *:hover) {
+  opacity: 1 !important;
+  background-color: hsl(218, 17%, 10%);
+  cursor: pointer;
+}
+
+.t_title {
+  background-color: hsl(218, 17%, 16%);
+  grid-column: span 2;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 14px;
+}
+
+.t_command,
+.t_description {
+  padding: 10px 14px;
+}
+
+.t_command,
+.t_description {
+  display: flex;
+  align-items: center;
+}
+.t_description {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.hide {
+  display: none;
+}
+#copyMessage {
+  position: fixed;
+  top: 70px;
+  background-color: hsl(160, 30%, 10%);
+  box-shadow: 10px 10px 40px 20px hsla(160, 30%, 3%, 0.7);
+  font-weight: 500;
+  color: hsl(150, 90%, 80%);
+  outline: solid 1px hsl(160, 62%, 30%);
+  padding: 0.5rem 1rem 0.6rem;
+  border-radius: 0.5rem;
+  animation: slide-in-bottom 2.5s forwards;
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  20%,
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    /* transform: translateY(0px); */
+    opacity: 0;
+  }
+}

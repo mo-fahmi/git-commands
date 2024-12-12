@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/assets/7578021.webp" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>git commands</title>
+  </head>
+  <body>
+    <h1>git --commands</h1>
+    <div class="slide-in-bottom hide" id="copyMessage">
+      git init Has been copied
+    </div>
+    <div class="main">
+      <nav class="links">
+        <ul>
+          <li class="link"><a href="#first-setup">First Setup</a></li>
+          <li class="link"><a href="#remove-git">Remove git</a></li>
+          <li class="link"><a href="#basic-flow">Basic Flow</a></li>
+          <li class="link"><a href="#branches">Branches</a></li>
+        </ul>
+      </nav>
+      <div class="tables__container">
+        <!-- NEW TABLE 1 -->
+        <div class="table">
+          <div class="t_title" id="first-setup">First Setup</div>
+          <div class="t_command">git init</div>
+          <div class="t_description">Starts a local repo</div>
+          <div class="t_command">git branch -m master main</div>
+          <div class="t_description">
+            Change local branch's name from master to main
+          </div>
+          <div class="t_command">git clone [url]</div>
+          <div class="t_description">Connects local repo to remote one</div>
+          <div class="t_command">git push -u origin main</div>
+          <div class="t_description">
+            <em>For the first push</em> Set the upstream of current branch
+          </div>
+        </div>
+        <!-- END OF TABLE 1 -->
+
+        <!-- NEW TABLE 2 -->
+        <div class="table">
+          <div class="t_title" id="remove-git">Remove Git</div>
+          <div class="t_command">rm -rf .git</div>
+          <div class="t_description">
+            Remove local repo and disconnect remote one
+          </div>
+          <div class="t_command">git remote remove origin</div>
+          <div class="t_description">Remove <em>only</em> remote repo</div>
+          <div class="t_command">git remote -v</div>
+          <div class="t_description">Check if remote repo has been deleted</div>
+        </div>
+        <!-- END OF TABLE 2 -->
+
+        <!-- NEW TABLE 3 -->
+        <div class="table">
+          <div class="t_title" id="basic-flow">Basic Flow</div>
+          <div class="t_command">git add .</div>
+          <div class="t_description">
+            Add code to the staging <em>temporary</em> area
+          </div>
+          <div class="t_command">git commit -m "msg"</div>
+          <div class="t_description">Add a commit to local repo</div>
+          <div class="t_command">git push</div>
+          <div class="t_description">
+            Push commit to the remote branch tracking the current local one
+          </div>
+        </div>
+        <!-- END OF TABLE 3 -->
+
+        <!-- NEW TABLE 4 -->
+        <div class="table">
+          <div class="t_title" id="branches">Branches</div>
+          <div class="t_command"></div>
+          <div class="t_description"></div>
+        </div>
+        <!-- END OF TABLE 4 -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

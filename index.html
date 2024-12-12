@@ -8,7 +8,25 @@
     <title>git commands</title>
   </head>
   <body>
-    <h1>git --commands</h1>
+    <div class="header__container">
+      <div class="header__logo_and_title">
+        <div class="header__logo_container">
+          <img src="assets/github.png" alt="" />
+        </div>
+        <h2 class="title">Git --commands</h2>
+      </div>
+      <nav class="header_navigation">
+        <ul>
+          <li class="link">
+            <a
+              target="_blank"
+              href="https://notebooklm.google.com/notebook/7a51fab3-312f-4a38-b99d-d1784913ce8f?_gl=1*1btz9ga*_ga*MjA0NzUyNzU2OS4xNzMzOTcxODYz*_ga_W0LDH41ZCB*MTczNDAwNTU2Ni4yLjEuMTczNDAwNTU2Ni42MC4wLjA."
+              >Notebook LM</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div class="slide-in-bottom hide" id="copyMessage">
       git init Has been copied
     </div>
@@ -33,7 +51,7 @@
           </div>
           <div class="t_command">git clone [url]</div>
           <div class="t_description">Connects local repo to remote one</div>
-          <div class="t_command">git push -u origin main</div>
+          <div class="t_command">git push <em>-u</em> origin main</div>
           <div class="t_description">
             <em>For the first push</em> Set the upstream of current branch
           </div>
@@ -73,8 +91,44 @@
         <!-- NEW TABLE 4 -->
         <div class="table">
           <div class="t_title" id="branches">Branches</div>
-          <div class="t_command"></div>
-          <div class="t_description"></div>
+          <div class="t_command">git checkout -b branch_name</div>
+          <div class="t_description">
+            Create a branch and checkout <em>switch</em> to it directly
+          </div>
+          <div class="t_command">git branch -m old new</div>
+          <div class="t_description">
+            Change the branch called <em>old</em> to <em>new</em>
+          </div>
+          <div class="t_command">git branch -m <em>new</em></div>
+          <div class="t_description">
+            Change <em>current</em>branch name to new
+          </div>
+          <div class="t_command">git branch</div>
+          <div class="t_description">List all <em>local</em> branches</div>
+          <div class="t_command">git branch -a</div>
+          <div class="t_description">
+            List all local <em>AND</em> remote (if any)
+          </div>
+          <div class="t_command">git branch <em>-d</em> br_name</div>
+          <div class="t_description">
+            Deletes a local branch only if it has been merged.
+          </div>
+          <div class="t_command">git branch <em>-D</em> br_name</div>
+          <div class="t_description">
+            Deletes a local branch <em>even if it hasn't been merged.</em>
+          </div>
+          <div class="t_command">git push origin <em>--delete</em> br_name</div>
+          <div class="t_description">
+            Deletes a branch from the remote repository.
+          </div>
+          <div class="t_command">git diff br1 br2</div>
+          <div class="t_description">
+            Shows differences between the two branches.
+          </div>
+          <div class="t_command">git branch <em>--no-merged</em></div>
+          <div class="t_description">
+            Shows branches that haven’t been merged into the current branch.
+          </div>
         </div>
         <!-- END OF TABLE 4 -->
       </div>

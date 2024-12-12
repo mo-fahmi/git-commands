@@ -217,8 +217,7 @@ nav.links {
 .t_description:hover,
 .t_command:hover,
 .t_command:hover + *,
-.t_command:has(+ *:hover),
-.note:hover {
+.t_command:has(+ *:hover) {
   opacity: 1 !important;
   background-color: hsl(218, 17%, 10%);
   cursor: pointer;
@@ -244,12 +243,20 @@ nav.links {
   padding: 10px 14px;
 }
 
-.note {
-  padding: 10px 14px 12px calc(30% + 14px);
+.note,
+.note-b,
+.note-t {
+  padding: 0 14px 0 calc(30% + 14px);
   grid-column: span 2;
   font-style: italic;
   color: blanchedalmond;
   opacity: 0.7;
+}
+.note-b {
+  padding-top: 1rem;
+}
+.note-t {
+  padding-bottom: 1rem;
 }
 
 .spacer {
@@ -257,6 +264,10 @@ nav.links {
   padding: 20px 14px 2px;
   font-weight: 600;
   color: #fea36a;
+}
+
+.summary {
+  background-color: hsl(24, 6%, 12%);
 }
 
 .t_command,

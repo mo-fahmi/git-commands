@@ -34,8 +34,8 @@
       <nav class="links">
         <ul>
           <li class="link"><a href="#first-setup">First Setup</a></li>
-          <li class="link"><a href="#remove-git">Remove git</a></li>
-          <li class="link"><a href="#basic-flow">Basic Flow</a></li>
+          <li class="link"><a href="#remove-git">Commits</a></li>
+          <li class="link"><a href="#basic-flow">Flow</a></li>
           <li class="link"><a href="#branches">Branches</a></li>
           <li class="link"><a href="#merging">Merging</a></li>
         </ul>
@@ -44,30 +44,46 @@
         <!-- NEW TABLE 1 -->
         <div class="table first_setup">
           <div class="t_title" id="first-setup">First Setup</div>
+          <div class="spacer">Initialize</div>
           <div class="t_command">git init</div>
           <div class="t_description">Starts a local repo</div>
           <div class="t_command">git branch -m master main</div>
+          <div class="t_description">Rename local master to main</div>
+          <div class="t_command">git clone <em>url</em></div>
           <div class="t_description">
-            Change local branch's name from master to main
+            Connects <em>+ download files</em> of remote repo to local one
           </div>
-          <div class="t_command">git clone [url]</div>
-          <div class="t_description">Connects local repo to remote one</div>
+          <div class="note">OR</div>
+
+          <div class="t_command">git remote add origin <em>url</em></div>
+          <div class="t_description">
+            <em>My favorite:</em> Just add the remote repo but don't get any
+            files from it
+          </div>
           <div class="t_command">git push <em>-u</em> origin main</div>
           <div class="t_description">
             <em>For the first push</em> Set the upstream of current branch
+          </div>
+          <div class="t_command summary"><em>Summary</em></div>
+          <div class="t_description summary">
+            init - rename - add origin - push <em>-u</em>
+          </div>
+          <div class="spacer">Remove git</div>
+          <div class="t_command">git remote remove origin</div>
+          <div class="t_description">Disconnect remote repo</div>
+          <div class="t_command">rm <em>-rf</em> .git</div>
+          <div class="t_description">
+            Remove local repo and disconnect
+            <em>and in turn disconnect remote one</em>
           </div>
         </div>
         <!-- END OF TABLE 1 -->
 
         <!-- NEW TABLE 2 -->
-        <div class="table remove_git">
-          <div class="t_title" id="remove-git">Remove Git</div>
-          <div class="t_command">rm -rf .git</div>
-          <div class="t_description">
-            Remove local repo and disconnect remote one
-          </div>
-          <div class="t_command">git remote remove origin</div>
-          <div class="t_description">Remove <em>only</em> remote repo</div>
+        <div class="table commits">
+          <div class="t_title" id="remove-git">Commits</div>
+          <div class="t_command">commit cmd</div>
+          <div class="t_description">description</div>
         </div>
         <!-- END OF TABLE 2 -->
 

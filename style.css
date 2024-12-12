@@ -123,7 +123,7 @@ h1 {
   color: hsl(0, 0%, 88%);
   z-index: 9;
   background: hsla(0, 0%, 5%, 0.18);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
 }
 
 .header__container,

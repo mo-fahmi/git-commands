@@ -142,15 +142,15 @@ h1 {
 }
 
 em {
+  display: contents;
   font-style: italic;
-  padding: 0px 6px !important;
   opacity: 0.7;
+  color: hsl(228, 3%, 72%);
 }
 
 .t_command em {
   display: contents;
   font-style: normal;
-  opacity: 1;
   color: rgb(254, 195, 106);
 }
 
@@ -211,17 +211,20 @@ nav.links {
 .tables__container:has(.table:hover) .table:not(.table:hover),
 .table:has(*:not(.t_title):hover) .t_description,
 .table:has(*:not(.t_title):hover) .t_command {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .t_description:hover,
 .t_command:hover,
 .t_command:hover + *,
-.t_command:has(+ *:hover) {
+.t_command:has(+ *:hover),
+.note:hover {
   opacity: 1 !important;
-  background-color: hsl(218, 17%, 14%);
+  background-color: hsl(218, 17%, 10%);
   cursor: pointer;
 }
+
+/* default title and description styles */
 
 .t_title {
   background: linear-gradient(
@@ -239,6 +242,21 @@ nav.links {
 .t_command,
 .t_description {
   padding: 10px 14px;
+}
+
+.note {
+  padding: 10px 14px 12px calc(30% + 14px);
+  grid-column: span 2;
+  font-style: italic;
+  color: blanchedalmond;
+  opacity: 0.7;
+}
+
+.spacer {
+  grid-column: span 2;
+  padding: 20px 14px 2px;
+  font-weight: 600;
+  color: #fea36a;
 }
 
 .t_command,

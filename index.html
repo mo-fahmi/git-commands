@@ -37,11 +37,12 @@
           <li class="link"><a href="#remove-git">Remove git</a></li>
           <li class="link"><a href="#basic-flow">Basic Flow</a></li>
           <li class="link"><a href="#branches">Branches</a></li>
+          <li class="link"><a href="#merging">Merging</a></li>
         </ul>
       </nav>
       <div class="tables__container">
         <!-- NEW TABLE 1 -->
-        <div class="table">
+        <div class="table first_setup">
           <div class="t_title" id="first-setup">First Setup</div>
           <div class="t_command">git init</div>
           <div class="t_description">Starts a local repo</div>
@@ -59,7 +60,7 @@
         <!-- END OF TABLE 1 -->
 
         <!-- NEW TABLE 2 -->
-        <div class="table">
+        <div class="table remove_git">
           <div class="t_title" id="remove-git">Remove Git</div>
           <div class="t_command">rm -rf .git</div>
           <div class="t_description">
@@ -67,13 +68,11 @@
           </div>
           <div class="t_command">git remote remove origin</div>
           <div class="t_description">Remove <em>only</em> remote repo</div>
-          <div class="t_command">git remote -v</div>
-          <div class="t_description">Check if remote repo has been deleted</div>
         </div>
         <!-- END OF TABLE 2 -->
 
         <!-- NEW TABLE 3 -->
-        <div class="table">
+        <div class="table basic_flow">
           <div class="t_title" id="basic-flow">Basic Flow</div>
           <div class="t_command">git add .</div>
           <div class="t_description">
@@ -89,26 +88,48 @@
         <!-- END OF TABLE 3 -->
 
         <!-- NEW TABLE 4 -->
-        <div class="table">
+        <div class="table brnaches">
           <div class="t_title" id="branches">Branches</div>
-          <div class="t_command">git checkout -b branch_name</div>
-          <div class="t_description">
-            Create a branch and checkout <em>switch</em> to it directly
-          </div>
+          <div class="spacer">Create & Switch</div>
+          <div class="t_command">git <em>switch -c</em> bN</div>
+          <div class="t_description">Create and switch</div>
+          <div class="t_command">git <em>checkout -b</em> bN</div>
+          <div class="t_description">Create and switch</div>
+          <div class="t_command">git <em>switch</em> bN</div>
+          <div class="t_description">Just switch</div>
+          <div class="t_command">git <em>checkout</em> bN</div>
+          <div class="t_description">Also switch</div>
+          <div class="spacer">Names</div>
           <div class="t_command">git branch -m old new</div>
           <div class="t_description">
-            Change the branch called <em>old</em> to <em>new</em>
+            Rename branch called <em>old</em> to <em>new</em>
           </div>
           <div class="t_command">git branch -m <em>new</em></div>
+          <div class="t_description">Rename <em>current</em>branch to new</div>
+          <div class="spacer">Upstream</div>
+          <div class="t_command">git push <em>-u</em> origin rB</div>
           <div class="t_description">
-            Change <em>current</em>branch name to new
+            Sets current branch to track <em>rB</em>. Typically used for a new
+            or untracked local branch.
           </div>
+          <div class="t_command">git branch <em>--unset-upstream</em></div>
+          <div class="t_description">
+            Removes the remote tracking of the current local branch
+          </div>
+          <div class="spacer">List</div>
           <div class="t_command">git branch</div>
-          <div class="t_description">List all <em>local</em> branches</div>
+          <div class="t_description">List <em>local</em> branches</div>
+          <div class="t_command">git branch -r</div>
+          <div class="t_description">List <em>remote</em> branches</div>
           <div class="t_command">git branch -a</div>
           <div class="t_description">
-            List all local <em>AND</em> remote (if any)
+            List local <em>and</em> remote branches
           </div>
+          <div class="t_command">git branch <em>--no-merged</em></div>
+          <div class="t_description">
+            List branches that haven’t been merged into the current branch.
+          </div>
+          <div class="spacer">Delete</div>
           <div class="t_command">git branch <em>-d</em> br_name</div>
           <div class="t_description">
             Deletes a local branch only if it has been merged.
@@ -121,16 +142,21 @@
           <div class="t_description">
             Deletes a branch from the remote repository.
           </div>
+          <div class="spacer">Difference</div>
           <div class="t_command">git diff br1 br2</div>
           <div class="t_description">
             Shows differences between the two branches.
           </div>
-          <div class="t_command">git branch <em>--no-merged</em></div>
-          <div class="t_description">
-            Shows branches that haven’t been merged into the current branch.
-          </div>
         </div>
         <!-- END OF TABLE 4 -->
+
+        <!-- NEW TABLE 5 -->
+        <div class="table mergin">
+          <div class="t_title" id="merging">Merging</div>
+          <div class="t_command">What's merging?</div>
+          <div class="t_description"></div>
+        </div>
+        <!-- END OF TABLE 5 -->
       </div>
     </div>
 

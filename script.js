@@ -1,7 +1,7 @@
 "use strict";
 
-const commands = document.querySelectorAll(".t_command");
-const descriptions = document.querySelectorAll(".t_description");
+const commands = document.querySelectorAll(".t_cmd:not(.summary)");
+const descriptions = document.querySelectorAll(".t_dsc:not(.summary)");
 const copyMessage = document.getElementById("copyMessage");
 
 commands.forEach((c) =>

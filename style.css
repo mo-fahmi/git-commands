@@ -148,7 +148,7 @@ em {
   color: hsl(228, 3%, 72%);
 }
 
-.t_command em {
+.t_cmd em {
   display: contents;
   font-style: normal;
   color: rgb(254, 195, 106);
@@ -209,15 +209,15 @@ nav.links {
 /* hover states */
 
 .tables__container:has(.table:hover) .table:not(.table:hover),
-.table:has(*:not(.t_title):hover) .t_description,
-.table:has(*:not(.t_title):hover) .t_command {
+.table:has(*:not(.t_title):hover) .t_dsc,
+.table:has(*:not(.t_title):hover) .t_cmd {
   opacity: 0.6;
 }
 
-.t_description:hover,
-.t_command:hover,
-.t_command:hover + *,
-.t_command:has(+ *:hover) {
+.t_dsc:hover,
+.t_cmd:hover,
+.t_cmd:hover + *,
+.t_cmd:has(+ *:hover) {
   opacity: 1 !important;
   background-color: hsl(218, 17%, 10%);
   cursor: pointer;
@@ -238,8 +238,8 @@ nav.links {
   padding: 14px;
 }
 
-.t_command,
-.t_description {
+.t_cmd,
+.t_dsc {
   padding: 10px 14px;
 }
 
@@ -270,12 +270,25 @@ nav.links {
   background-color: hsl(24, 6%, 12%);
 }
 
-.t_command,
-.t_description {
+.question {
+  grid-column: span 2;
+  padding: 10px 14px;
+}
+
+.question:nth-child(1 of .question) {
+  padding-top: 16px;
+}
+
+.question:last-of-type {
+  padding-bottom: 16px;
+}
+
+.t_cmd,
+.t_dsc {
   display: flex;
   align-items: center;
 }
-.t_description {
+.t_dsc {
   color: hsla(0, 0%, 100%, 0.5);
 }
 

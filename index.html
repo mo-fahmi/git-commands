@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="/assets/7578021.webp" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/git.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>git commands</title>
   </head>
@@ -33,46 +33,56 @@
     <div class="main">
       <nav class="links">
         <ul>
-          <li class="link"><a href="#first-setup">First Setup</a></li>
+          <li class="link"><a href="#questions">Questions</a></li>
+          <li class="link"><a href="#first-setup">Setup</a></li>
           <li class="link"><a href="#remove-git">Commits</a></li>
-          <li class="link"><a href="#basic-flow">Flow</a></li>
           <li class="link"><a href="#branches">Branches</a></li>
           <li class="link"><a href="#merging">Merging</a></li>
         </ul>
       </nav>
       <div class="tables__container">
+        <div class="table questions">
+          <div class="t_title" id="questions">Questions</div>
+          <div class="question">
+            What if I worked in a branch -main for example- and suddenly
+            realized I shouldn't be working here, I should be on features this
+            whole time, how do I switch branches without losing the working
+            directory or the staging area?
+          </div>
+        </div>
+
         <!-- NEW TABLE 1 -->
         <div class="table first_setup">
           <div class="t_title" id="first-setup">First Setup</div>
           <div class="spacer">Initialize</div>
-          <div class="t_command">git init</div>
-          <div class="t_description">Starts a local repo</div>
-          <div class="t_command">git branch -m master main</div>
-          <div class="t_description">Rename local master to main</div>
-          <div class="t_command">git clone <em>url</em></div>
-          <div class="t_description">
+          <div class="t_cmd">git init</div>
+          <div class="t_dsc">Starts a local repo</div>
+          <div class="t_cmd">git branch -m master main</div>
+          <div class="t_dsc">Rename local master to main</div>
+          <div class="t_cmd">git clone <em>url</em></div>
+          <div class="t_dsc">
             Connects <em>+ download files</em> of remote repo to local one
           </div>
           <div class="note">OR</div>
 
-          <div class="t_command">git remote add origin <em>url</em></div>
-          <div class="t_description">
+          <div class="t_cmd">git remote add origin <em>url</em></div>
+          <div class="t_dsc">
             <em>My favorite:</em> Just add the remote repo but don't get any
             files from it
           </div>
-          <div class="t_command">git push <em>-u</em> origin main</div>
-          <div class="t_description">
+          <div class="t_cmd">git push <em>-u</em> origin main</div>
+          <div class="t_dsc">
             <em>For the first push</em> Set the upstream of current branch
           </div>
-          <div class="t_command summary"><em>Summary</em></div>
-          <div class="t_description summary">
+          <div class="t_cmd summary"><em>Summary</em></div>
+          <div class="t_dsc summary">
             init - rename - add origin - push <em>-u</em>
           </div>
           <div class="spacer">Remove git</div>
-          <div class="t_command">git remote remove origin</div>
-          <div class="t_description">Disconnect remote repo</div>
-          <div class="t_command">rm <em>-rf</em> .git</div>
-          <div class="t_description">
+          <div class="t_cmd">git remote remove origin</div>
+          <div class="t_dsc">Disconnect remote repo</div>
+          <div class="t_cmd">rm <em>-rf</em> .git</div>
+          <div class="t_dsc">
             Remove local repo and disconnect
             <em>and in turn disconnect remote one</em>
           </div>
@@ -82,97 +92,88 @@
         <!-- NEW TABLE 2 -->
         <div class="table commits">
           <div class="t_title" id="remove-git">Commits</div>
-          <div class="t_command">commit cmd</div>
-          <div class="t_description">description</div>
+          <div class="t_cmd">commit cmd</div>
+          <div class="t_dsc">description</div>
         </div>
         <!-- END OF TABLE 2 -->
 
         <!-- NEW TABLE 3 -->
-        <div class="table basic_flow">
-          <div class="t_title" id="basic-flow">Basic Flow</div>
-          <div class="t_command">git add .</div>
-          <div class="t_description">
-            Add code to the staging <em>temporary</em> area
+        <div class="table brnaches">
+          <div class="t_title" id="branches">Branches</div>
+          <div class="spacer">Create & Switch</div>
+          <div class="t_cmd">git <em>switch -c</em> bN</div>
+          <div class="t_dsc">Create and switch</div>
+          <div class="t_cmd">git <em>checkout -b</em> bN</div>
+          <div class="t_dsc">Create and switch</div>
+          <div class="t_cmd">git <em>switch</em> bN</div>
+          <div class="t_dsc">Just switch</div>
+          <div class="t_cmd">git <em>checkout</em> bN</div>
+          <div class="t_dsc">Also switch</div>
+          <div class="spacer">Names</div>
+          <div class="t_cmd">git branch -m old new</div>
+          <div class="t_dsc">
+            Rename branch called <em>old</em> to <em>new</em>
           </div>
-          <div class="t_command">git commit -m "msg"</div>
-          <div class="t_description">Add a commit to local repo</div>
-          <div class="t_command">git push</div>
-          <div class="t_description">
-            Push commit to the remote branch tracking the current local one
+          <div class="t_cmd">git branch -m <em>new</em></div>
+          <div class="t_dsc">Rename <em>current</em>branch to new</div>
+          <div class="spacer">Upstream</div>
+          <div class="t_cmd">git push <em>-u</em> origin rB</div>
+          <div class="t_dsc">
+            Sets current branch to track <em>rB</em>. Typically used for a new
+            or untracked local branch.
+          </div>
+          <div class="t_cmd">git branch <em>--unset-upstream</em></div>
+          <div class="t_dsc">
+            Removes the remote tracking of the current local branch
+          </div>
+          <div class="spacer">List</div>
+          <div class="t_cmd">git branch</div>
+          <div class="t_dsc">List <em>local</em> branches</div>
+          <div class="t_cmd">git branch -r</div>
+          <div class="t_dsc">List <em>remote</em> branches</div>
+          <div class="t_cmd">git branch -a</div>
+          <div class="t_dsc">
+            List local <em>and</em> remote branches
+          </div>
+          <div class="t_cmd">git branch <em>--no-merged</em></div>
+          <div class="t_dsc">
+            List branches that haven’t been merged into the current branch.
+          </div>
+          <div class="spacer">Delete</div>
+          <div class="t_cmd">git branch <em>-d</em> br_name</div>
+          <div class="t_dsc">
+            Deletes a local branch only if it has been merged.
+          </div>
+          <div class="t_cmd">git branch <em>-D</em> br_name</div>
+          <div class="t_dsc">
+            Deletes a local branch <em>even if it hasn't been merged.</em>
+          </div>
+          <div class="t_cmd">git push origin <em>--delete</em> br_name</div>
+          <div class="t_dsc">
+            Deletes a branch from the remote repository.
+          </div>
+          <div class="spacer">Difference</div>
+          <div class="t_cmd">git diff br1 br2</div>
+          <div class="t_dsc">
+            Shows differences between the two branches.
           </div>
         </div>
         <!-- END OF TABLE 3 -->
 
         <!-- NEW TABLE 4 -->
-        <div class="table brnaches">
-          <div class="t_title" id="branches">Branches</div>
-          <div class="spacer">Create & Switch</div>
-          <div class="t_command">git <em>switch -c</em> bN</div>
-          <div class="t_description">Create and switch</div>
-          <div class="t_command">git <em>checkout -b</em> bN</div>
-          <div class="t_description">Create and switch</div>
-          <div class="t_command">git <em>switch</em> bN</div>
-          <div class="t_description">Just switch</div>
-          <div class="t_command">git <em>checkout</em> bN</div>
-          <div class="t_description">Also switch</div>
-          <div class="spacer">Names</div>
-          <div class="t_command">git branch -m old new</div>
-          <div class="t_description">
-            Rename branch called <em>old</em> to <em>new</em>
+        <div class="table mergin">
+          <div class="t_title" id="merging">Merging</div>
+          <div class="t_cmd">
+            What's merging? <br />
+            <em>if no conflict</em>
           </div>
-          <div class="t_command">git branch -m <em>new</em></div>
-          <div class="t_description">Rename <em>current</em>branch to new</div>
-          <div class="spacer">Upstream</div>
-          <div class="t_command">git push <em>-u</em> origin rB</div>
-          <div class="t_description">
-            Sets current branch to track <em>rB</em>. Typically used for a new
-            or untracked local branch.
-          </div>
-          <div class="t_command">git branch <em>--unset-upstream</em></div>
-          <div class="t_description">
-            Removes the remote tracking of the current local branch
-          </div>
-          <div class="spacer">List</div>
-          <div class="t_command">git branch</div>
-          <div class="t_description">List <em>local</em> branches</div>
-          <div class="t_command">git branch -r</div>
-          <div class="t_description">List <em>remote</em> branches</div>
-          <div class="t_command">git branch -a</div>
-          <div class="t_description">
-            List local <em>and</em> remote branches
-          </div>
-          <div class="t_command">git branch <em>--no-merged</em></div>
-          <div class="t_description">
-            List branches that haven’t been merged into the current branch.
-          </div>
-          <div class="spacer">Delete</div>
-          <div class="t_command">git branch <em>-d</em> br_name</div>
-          <div class="t_description">
-            Deletes a local branch only if it has been merged.
-          </div>
-          <div class="t_command">git branch <em>-D</em> br_name</div>
-          <div class="t_description">
-            Deletes a local branch <em>even if it hasn't been merged.</em>
-          </div>
-          <div class="t_command">git push origin <em>--delete</em> br_name</div>
-          <div class="t_description">
-            Deletes a branch from the remote repository.
-          </div>
-          <div class="spacer">Difference</div>
-          <div class="t_command">git diff br1 br2</div>
-          <div class="t_description">
-            Shows differences between the two branches.
+          <div class="t_dsc">
+            Typically a <em>3 way merge</em> looks at the tip of the brB and brA
+            and both their common ancestor commit, merges all the changes in one
+            commit at brA
           </div>
         </div>
         <!-- END OF TABLE 4 -->
-
-        <!-- NEW TABLE 5 -->
-        <div class="table mergin">
-          <div class="t_title" id="merging">Merging</div>
-          <div class="t_command">What's merging?</div>
-          <div class="t_description"></div>
-        </div>
-        <!-- END OF TABLE 5 -->
       </div>
     </div>
 
